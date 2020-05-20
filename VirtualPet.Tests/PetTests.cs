@@ -29,15 +29,17 @@ namespace VirtualPet.Tests
         public void Pet_Should_Have_Name()
        
         {
-            Assert.NotNull(testPet.Name);
+            testPet.Name = "Pet Name";
+            Assert.Equal("Pet Name", testPet.Name);
+            //Assert.NotNull(testPet.Name);
         }
 
         [Fact]
         public void SetName_Should_Assign_Pet_Name_Property()
         {
-            //testPet.SetName("Fluffy");
+            testPet.SetName("Fluffy");
 
-            //Assert.Equal("Fluffy", testPet.Name);
+            Assert.Equal("Fluffy", testPet.Name);
         }
 
         [Fact]

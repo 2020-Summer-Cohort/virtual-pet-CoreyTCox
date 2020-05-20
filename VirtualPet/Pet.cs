@@ -7,8 +7,10 @@ namespace VirtualPet
     public class Pet
     {
         private string name;
+        
+        public string Name { get; set; }
 
-        public string Name { get; set;}
+        public string SetName(string name);
 
     }
 }

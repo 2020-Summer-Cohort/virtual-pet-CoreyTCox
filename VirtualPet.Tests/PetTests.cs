@@ -1,4 +1,6 @@
 using System;
+using System.Security;
+using System.Security.Cryptography.X509Certificates;
 using Xunit;
 
 namespace VirtualPet.Tests
@@ -14,6 +16,7 @@ namespace VirtualPet.Tests
 
         [Fact]
         public void Pet_Constructor_Should_Instantiate_Pet_Object()
+
         {
             Assert.NotNull(testPet);
         }
@@ -21,11 +24,12 @@ namespace VirtualPet.Tests
         // INSTRUCTIONS:
         // Uncomment code in the test body one test at a time
         // Add source code to eliminate the build errors (red squiggle) and pass the test
-        
+
         [Fact]
         public void Pet_Should_Have_Name()
+       
         {
-            // Assert.NotNull(testPet.Name);
+            Assert.NotNull(testPet.Name);
         }
 
         [Fact]

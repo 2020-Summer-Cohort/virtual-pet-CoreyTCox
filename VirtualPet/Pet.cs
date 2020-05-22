@@ -15,13 +15,16 @@ namespace VirtualPet
         public string Name { get; set; }
 
         // add a Species property
+        public string Species { get; set; }
 
         // add a Hunger property
+        public string Hunger { get; set; }
 
         // add a Boredom property
+        public string Boredom { get; set; }
 
         // add a Health property
-
+        public string Health { get; set; }
 
         // Constructor Section --------------------- 
 

@@ -11,7 +11,7 @@ namespace VirtualPet
     {
         //private string name;  // this is unnecessary if you add your properties like in line 16, you can remove it
         //private string species;
-        private int hunger;
+        //private int hunger;
         //private int boredom;
         //private int health;
         // Properties Section ------------------ see Players Guide pg 136, Auto implemented Properties

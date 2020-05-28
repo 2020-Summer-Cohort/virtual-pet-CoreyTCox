@@ -47,7 +47,7 @@ namespace VirtualPet.Tests
         {
             testPet.SetName("Fido");
 
-            string testPetName = testPet.GetName();
+            //string testPetName = testPet.GetName();
 
             Assert.Equal("Fido", testPetName);
         }
@@ -127,9 +127,9 @@ namespace VirtualPet.Tests
         }
 
         [Fact]
-        public void SeeDoctor_Should_Increase_Health_By_30()
+        public void SeeVet_Should_Increase_Health_By_30()
         {
-            testPet.SeeDoctor();
+            testPet.SeeVet();
 
             Assert.Equal(60, testPet.GetHealth());
         }

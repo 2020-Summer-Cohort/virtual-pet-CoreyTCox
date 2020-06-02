@@ -9,7 +9,6 @@ namespace VirtualPet
 {
     public class Pet
     {
-       
         public string Name { get; set; }
 
         public string Species { get; set; }
@@ -27,7 +26,10 @@ namespace VirtualPet
             Health = 30;
         }
 
-
+        public string GetName()
+        {
+            return Name;
+        }
         public void SetName(string name)
         {
             Name = name;
@@ -45,15 +47,29 @@ namespace VirtualPet
         }
 
         // add a method named Feed that has no parameters, has no return value, and decreases Hunger by 40
+        public int GetBoredom()
+        {
+            return Boredom;
+        }
+        public int GetHealth()
+        {
+            return Health;
+        }
+        public int GetHunger()
+        {
+            return Hunger;
+        }
         public void Feed()
         {
             Hunger = Hunger - 40;
+            Console.WriteLine($"You fed {Name}");
         }
 
         // add a method named SeeDoctor that has no parameters, has no return value, and increases Health by 30
         public void SeeVet()
         {
             Health = Health + 30;
+            Console.WriteLine($"You took {Name} to the Vet");
         }
 
         // add a method named Play that has no parameters, has no return value, and increases Hunger by 10,
@@ -63,6 +79,7 @@ namespace VirtualPet
             Hunger = Hunger + 10;
             Boredom = Boredom - 20;
             Health = Health + 10;
+            Console.WriteLine($"You played with {Name}");
         }
 
         // add a method named Tick that has no parameters, has no return value, and increases Hunger by 5, increases
@@ -72,6 +89,22 @@ namespace VirtualPet
             Hunger = Hunger + 5;
             Boredom = Boredom + 5;
             Health = Health - 5;
+        }
+        public void CreatePet()
+        {
+            Console.WriteLine("What is your pet's name?");
+            Name = Console.ReadLine();
+            Console.WriteLine("What is the species of your pet?");
+            Species = Console.ReadLine();
+            Console.WriteLine($"You created a {Species} named {Name}");
+        }
+        public void ShowPetStatus()
+        {
+            Console.WriteLine($"Status of {Name} the {Species}");
+            Console.WriteLine($"Hunger: {Hunger}");
+            Console.WriteLine($"Boredom: {Boredom}");
+            Console.WriteLine($"Health: {Health}");
+
         }
 
     }

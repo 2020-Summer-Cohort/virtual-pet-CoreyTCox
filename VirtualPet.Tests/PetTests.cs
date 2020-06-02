@@ -47,7 +47,7 @@ namespace VirtualPet.Tests
         {
             testPet.SetName("Fido");
 
-            //string testPetName = testPet.GetName();
+            string testPetName = testPet.GetName();
 
             Assert.Equal("Fido", testPetName);
         }

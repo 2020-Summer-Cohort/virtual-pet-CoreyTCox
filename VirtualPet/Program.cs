@@ -20,7 +20,8 @@ namespace VirtualPet
                 Console.WriteLine("3. Play with your pet");
                 Console.WriteLine("4. Add a pet");
                 Console.WriteLine("5. Show Pet Status");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. See all pets in shelter");
+                Console.WriteLine("7. Exit");
 
                 string userSelection = Console.ReadLine();
                 pet.Tick();
@@ -38,13 +39,17 @@ namespace VirtualPet
                         pet.Play();
                         break;
                     case "4":
+                        pet = new Pet();
                         pet.CreatePet();
                         shelter.AddPetToShelter(pet);
                         break;
                     case "5":
                         pet.ShowPetStatus();
                         break;
-                    case "6":                  
+                    case "6":
+                        shelter.SeeListOfPets();
+                        break;
+                    case "7":                  
                         keepThinking = false;
                         break;
                 }    

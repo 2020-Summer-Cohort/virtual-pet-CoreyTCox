@@ -44,12 +44,6 @@ namespace VirtualPet.Tests
         }
         
         [Fact]
-        public void ListOfPets_Should_Print_List_Of_Pets_In_Shelter()
-        {
-
-        }
-
-        [Fact]
         public void CurrentStatus_Should_Print_Status_Of_Each_Pet_In_Shelter()
         {
 

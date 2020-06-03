@@ -13,6 +13,13 @@ namespace VirtualPet
             listOfPets.Add(pet);
             Console.WriteLine("You added a pet to Shelter");
         }
+        public void SeeListOfPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                Console.WriteLine($"{pet.GetName()} the {pet.GetSpecies()}");
+            }
+        }
     }
 }
 

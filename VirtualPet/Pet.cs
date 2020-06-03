@@ -62,14 +62,14 @@ namespace VirtualPet
         public void Feed()
         {
             Hunger = Hunger - 40;
-            Console.WriteLine($"You fed {Name}");
+            Console.WriteLine($"\nYou fed {Name}\n");
         }
 
         // add a method named SeeDoctor that has no parameters, has no return value, and increases Health by 30
         public void SeeVet()
         {
             Health = Health + 30;
-            Console.WriteLine($"You took {Name} to the Vet");
+            Console.WriteLine($"\nYou took {Name} to the Vet\n");
         }
 
         // add a method named Play that has no parameters, has no return value, and increases Hunger by 10,
@@ -79,7 +79,7 @@ namespace VirtualPet
             Hunger = Hunger + 10;
             Boredom = Boredom - 20;
             Health = Health + 10;
-            Console.WriteLine($"You played with {Name}");
+            Console.WriteLine($"\nYou played with {Name}\n");
         }
 
         // add a method named Tick that has no parameters, has no return value, and increases Hunger by 5, increases
@@ -96,16 +96,17 @@ namespace VirtualPet
             Name = Console.ReadLine();
             Console.WriteLine("What is the species of your pet?");
             Species = Console.ReadLine();
-            Console.WriteLine($"You created a {Species} named {Name}");
+            Console.WriteLine($"\nYou created a {Species} named {Name}\n");
         }
         public void ShowPetStatus()
         {
-            Console.WriteLine($"Status of {Name} the {Species}");
+            Console.WriteLine($"Status of {Name} the {Species}\n");
             Console.WriteLine($"Hunger: {Hunger}");
             Console.WriteLine($"Boredom: {Boredom}");
-            Console.WriteLine($"Health: {Health}");
+            Console.WriteLine($"Health: {Health}\n");
 
         }
+
 
     }
 }

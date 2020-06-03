@@ -7,9 +7,11 @@ namespace VirtualPet.Tests
 {
     public class ShelterTests
     {
+        Pet testPet;
         Shelter testShelter;//could have used sut for "system under test"
         public ShelterTests()
         {
+            testPet = new Pet();
             testShelter = new Shelter();
         }
 
@@ -24,15 +26,15 @@ namespace VirtualPet.Tests
         }
 
         [Fact]
-        public void _Should_Instantiate_List()
+        public void Should_Instantiate_List()
         {
-            Assert.NotNull(testShelter.ListOfPets);
+            Assert.NotNull(testShelter.listOfPets);
         }
-
         [Fact]
-        public void Admit_Should_Add_Pet_To_Shelter()
+        public void Add_Pet_To_Shelter_Should_Add_Pet_To_List()
         {
-
+            testShelter.AddPetToShelter(testPet);
+            Assert.NotNull(testShelter.listOfPets[0]);
         }
 
         [Fact]

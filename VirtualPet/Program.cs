@@ -7,6 +7,7 @@ namespace VirtualPet
         static void Main(string[] args)
         {
             Pet pet = new Pet();
+            Shelter shelter = new Shelter();
 
             bool keepThinking = true;
             while (keepThinking)
@@ -38,6 +39,7 @@ namespace VirtualPet
                         break;
                     case "4":
                         pet.CreatePet();
+                        shelter.AddPetToShelter(pet);
                         break;
                     case "5":
                         pet.ShowPetStatus();

@@ -6,6 +6,13 @@ namespace VirtualPet
 {
     public class Shelter
     {
-        List<Shelter> listOfPets = new List<Shelter>();
+        public List<Pet> listOfPets = new List<Pet>();
+
+        public void AddPetToShelter(Pet pet)
+        {
+            listOfPets.Add(pet);
+            Console.WriteLine("You added a pet to Shelter");
+        }
     }
 }
+

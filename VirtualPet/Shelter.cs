@@ -20,6 +20,35 @@ namespace VirtualPet
                 Console.WriteLine($"{pet.GetName()} the {pet.GetSpecies()}");
             }
         }
+        public void SeeStatusOfPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                pet.ShowPetStatus();
+            }
+
+        }
+        public void FeedAllPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                pet.Feed();
+            }
+        }
+        public void PlayAllPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                pet.Play();
+            }
+        }
+        public void SeeVetAllPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                pet.SeeVet();
+            }
+        }
     }
 }
 

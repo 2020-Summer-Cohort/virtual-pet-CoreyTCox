@@ -9,10 +9,12 @@ namespace VirtualPet.Tests
     {
         Pet testPet;
         Shelter testShelter;//could have used sut for "system under test"
+        List<Pet> testListOfPets;
         public ShelterTests()
         {
             testPet = new Pet();
             testShelter = new Shelter();
+            testListOfPets = new List<Pet>();
         }
 
         //admit pets into shelter and adopt
@@ -36,18 +38,16 @@ namespace VirtualPet.Tests
             testShelter.AddPetToShelter(testPet);
             Assert.NotNull(testShelter.listOfPets[0]);
         }
-
         [Fact]
-        public void Adopt_Should_Remove_Pet_From_Shelter()
+        public void See_Status_Of_Pets_Should_Print_Status_Of_Each_Pet_In_Shelter()
         {
-
+            testShelter.SeeStatusOfPets();
+            Assert.NotNull(testShelter.listOfPets[0]);
         }
-        
-        [Fact]
-        public void CurrentStatus_Should_Print_Status_Of_Each_Pet_In_Shelter()
-        {
+        //[Fact]
+        //public void Adopt_Should_Remove_Pet_From_Shelter()
+        //{
 
-        }
-
+        //}
     }
 }

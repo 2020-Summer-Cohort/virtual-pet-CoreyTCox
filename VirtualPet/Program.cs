@@ -20,11 +20,15 @@ namespace VirtualPet
                 Console.WriteLine("3. Play with your pet");
                 Console.WriteLine("4. Add a pet");
                 Console.WriteLine("5. Show Pet Status");
-                Console.WriteLine("6. See all pets in shelter");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("6. Feed all pets");
+                Console.WriteLine("7. Take all pets to the vet");
+                Console.WriteLine("8. Play with all pets");
+                Console.WriteLine("9. See all pets in shelter");
+                Console.WriteLine("10. Show status of all pets");
+                Console.WriteLine("11. Exit");
 
                 string userSelection = Console.ReadLine();
-                pet.Tick();
+                shelter.TickAllPets();
                 Console.Clear();
 
                 switch (userSelection)
@@ -47,9 +51,21 @@ namespace VirtualPet
                         pet.ShowPetStatus();
                         break;
                     case "6":
+                        shelter.FeedAllPets();
+                        break;
+                    case "7":
+                        shelter.SeeVetAllPets();
+                        break;
+                    case "8":
+                        shelter.PlayAllPets();
+                        break;
+                    case "9":
                         shelter.SeeListOfPets();
                         break;
-                    case "7":                  
+                    case "10":
+                        shelter.SeeStatusOfPets();
+                        break;
+                    case "11":                  
                         keepThinking = false;
                         break;
                 }    

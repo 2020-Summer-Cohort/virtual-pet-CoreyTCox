@@ -49,6 +49,14 @@ namespace VirtualPet
                 pet.SeeVet();
             }
         }
+        public void TickAllPets()
+        {
+            foreach (Pet pet in listOfPets)
+            {
+                pet.Tick();
+            }
+        }
+
     }
 }
 

@@ -65,15 +65,12 @@ namespace VirtualPet
             Console.WriteLine($"\nYou fed {Name}\n");
         }
 
-        // add a method named SeeDoctor that has no parameters, has no return value, and increases Health by 30
         public void SeeVet()
         {
             Health = Health + 30;
             Console.WriteLine($"\nYou took {Name} to the Vet\n");
         }
 
-        // add a method named Play that has no parameters, has no return value, and increases Hunger by 10,
-        // decreases Boredom by 20, and increases Health by 10
         public void Play()
         {
             Hunger = Hunger + 10;
@@ -82,8 +79,6 @@ namespace VirtualPet
             Console.WriteLine($"\nYou played with {Name}\n");
         }
 
-        // add a method named Tick that has no parameters, has no return value, and increases Hunger by 5, increases
-        // Boredom by 5, and decreases Health by 5
         public void Tick()
         {
             Hunger = Hunger + 5;

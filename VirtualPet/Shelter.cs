@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace VirtualPet
 {
@@ -15,9 +16,11 @@ namespace VirtualPet
         }
         public void SeeListOfPets()
         {
+            int count = 1;
             foreach (Pet pet in listOfPets)
             {
-                Console.WriteLine($"{pet.GetName()} the {pet.GetSpecies()}");
+                Console.WriteLine($"{count}. {pet.GetName()} the {pet.GetSpecies()}\n");
+                count++;
             }
         }
         public void SeeStatusOfPets()
@@ -56,7 +59,14 @@ namespace VirtualPet
                 pet.Tick();
             }
         }
-
+        public Pet SelectPet(int petSelection)
+            //SeeListOfPets();
+            //Console.Write("Select a Pet");
+            //petSelection = Convert.ToInt32(Console.ReadLine());
+        {
+            int petIndex = petSelection - 1;
+            return listOfPets[petIndex];
+        }
     }
 }
 

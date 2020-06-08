@@ -7,11 +7,15 @@ namespace VirtualPet.Tests
 {
     public class ShelterTests
     {
-        Pet testPet;
+        Pet testPet1;
+        Pet testPet2;
+        Pet testPet3;
         Shelter testShelter;//could have used sut for "system under test"
         public ShelterTests()
         {
-            testPet = new Pet();
+            testPet1 = new Pet();
+            testPet2 = new Pet();
+            testPet3 = new Pet();
             testShelter = new Shelter();
         }
 
@@ -33,7 +37,7 @@ namespace VirtualPet.Tests
         [Fact]
         public void Add_Pet_To_Shelter_Should_Add_Pet_To_List()
         {
-            testShelter.AddPetToShelter(testPet);
+            testShelter.AddPetToShelter(testPet1);
             Assert.NotNull(testShelter.listOfPets[0]);
         }
 
@@ -171,6 +175,18 @@ namespace VirtualPet.Tests
             Assert.Equal(25, testPet1.Health);
             Assert.Equal(25, testPet2.Health);
             Assert.Equal(25, testPet3.Health);
+        }
+
+        [Fact]
+        public void Select_Pet_Should_Return_Pet_In_Related_Index_In_List()
+        {
+            testShelter.listOfPets.Add(testPet1);
+            testShelter.listOfPets.Add(testPet2);
+            testShelter.listOfPets.Add(testPet3);
+            
+            testShelter.SelectPet(1);
+
+            Assert.Equal(testShelter.listOfPets[0], testPet1);
         }
     }
 }

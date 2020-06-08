@@ -25,7 +25,8 @@ namespace VirtualPet
                 Console.WriteLine("8. Play with all pets");
                 Console.WriteLine("9. See all pets in shelter");
                 Console.WriteLine("10. Show status of all pets");
-                Console.WriteLine("11. Exit");
+                Console.WriteLine("11. Select A Pet");
+                Console.WriteLine("12. Exit");
 
                 string userSelection = Console.ReadLine();
                 shelter.TickAllPets();
@@ -65,7 +66,14 @@ namespace VirtualPet
                     case "10":
                         shelter.SeeStatusOfPets();
                         break;
-                    case "11":                  
+                    case "11":
+                        shelter.SeeListOfPets();
+                        Console.WriteLine("Select a pet(#)");
+                        int petSelection = Convert.ToInt32(Console.ReadLine());
+                        pet = shelter.SelectPet(petSelection);
+                        Console.WriteLine($"You selected {pet.Name} the {pet.Species}");
+                        break;
+                    case "12":                  
                         keepThinking = false;
                         break;
                 }    

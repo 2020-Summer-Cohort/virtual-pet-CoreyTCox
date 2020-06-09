@@ -46,8 +46,8 @@ namespace VirtualPet
         public override void Play()
         {
             Battery = Battery - 30;
-            Rust = Rust - 20;
-            Oil = Oil - 25;
+            Rust = Rust - 25;
+            Oil = Oil - 20;
             Console.WriteLine($"\nYou played with {Name}\n");
         }
 
@@ -74,3 +74,4 @@ namespace VirtualPet
 
         }
     }
+}

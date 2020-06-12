@@ -6,19 +6,25 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello! Welcome to Virtual Pets");
+
             Pet pet = new Pet();
+            OrganicPet organicPet = new OrganicPet();
+            RoboticPet roboticPet = new RoboticPet();
             Shelter shelter = new Shelter();
+
+            Console.WriteLine("\nAdmit your first pet into the Shelter");
+            pet.CreatePet();
+            shelter.AddPetToShelter(pet);
+            Console.Clear();
 
             bool keepThinking = true;
             while (keepThinking)
            {
-
-                Console.WriteLine("Hello! Welcome to Virtual Pets");
-
                 Console.WriteLine("1. Feed your pet");
                 Console.WriteLine("2. Take your pet to the vet");
                 Console.WriteLine("3. Play with your pet");
-                Console.WriteLine("4. Add a pet");
+                Console.WriteLine("4. Admit a New Pet Into Shelter");
                 Console.WriteLine("5. Show Pet Status");
                 Console.WriteLine("6. Feed all pets");
                 Console.WriteLine("7. Take all pets to the vet");

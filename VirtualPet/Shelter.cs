@@ -12,7 +12,7 @@ namespace VirtualPet
         public void AddPetToShelter(Pet pet)
         {
             listOfPets.Add(pet);
-            Console.WriteLine("You added a pet to Shelter");
+            Console.WriteLine("You admitted a pet into the shelter");
         }
         public void SeeListOfPets()
         {
@@ -60,9 +60,6 @@ namespace VirtualPet
             }
         }
         public Pet SelectPet(int petSelection)
-            //SeeListOfPets();
-            //Console.Write("Select a Pet");
-            //petSelection = Convert.ToInt32(Console.ReadLine());
         {
             int petIndex = petSelection - 1;
             return listOfPets[petIndex];

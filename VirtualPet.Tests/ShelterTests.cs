@@ -15,7 +15,8 @@ namespace VirtualPet.Tests
         RoboticPet testRoboticPet2;
         RoboticPet testRoboticPet3;
 
-        Shelter testShelter;//could have used sut for "system under test"
+        Shelter testShelter;
+        
         public ShelterTests()
         {
             testOrganicPet1 = new OrganicPet();
@@ -40,6 +41,7 @@ namespace VirtualPet.Tests
         {
             Assert.NotNull(testShelter.listOfPets);
         }
+        
         [Fact]
         public void Add_Pet_To_Shelter_Should_Add_Pet_To_List()
         {
@@ -323,6 +325,13 @@ namespace VirtualPet.Tests
             testShelter.SelectPet(1);
 
             Assert.Equal(testShelter.listOfPets[0], testOrganicPet1);
+        }
+
+        [Fact]
+        public void Remove_Pet_To_Shelter_Should_Remove_Pet_To_List()
+        {
+            testShelter.AddPetToShelter(testOrganicPet1);
+            Assert.NotNull(testShelter.listOfPets[0]);
         }
     }
 }

@@ -22,13 +22,12 @@ namespace VirtualPet
         {
             return Name;
         }
+
         public void SetName(string name)
         {
             Name = name;
         }
 
-        // add a method named SetSpecies that takes in a string parameter, has no return value, and sets the 
-        // Species property to the value passed in as a parameter
         public string GetSpecies()
         {
             return Species;
@@ -65,7 +64,5 @@ namespace VirtualPet
         {
 
         }
-
-
     }
 }

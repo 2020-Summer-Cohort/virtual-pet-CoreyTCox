@@ -62,7 +62,7 @@ namespace VirtualPet
             Console.WriteLine("What is your robopet's name?");
             Name = Console.ReadLine();
             Console.WriteLine("What is the species of your robopet?");
-            Species = ("Robo" + Console.ReadLine());
+            Species = "Robo" + Console.ReadLine();
             Console.WriteLine($"\nYou created a {Species} named {Name}\n");
         }
         public override void ShowPetStatus()
@@ -71,7 +71,6 @@ namespace VirtualPet
             Console.WriteLine($"Battery: {Battery}");
             Console.WriteLine($"Rust: {Rust}");
             Console.WriteLine($"Oil: {Oil}\n");
-
         }
     }
 }

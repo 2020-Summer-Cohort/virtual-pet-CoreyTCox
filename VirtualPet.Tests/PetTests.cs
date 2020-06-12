@@ -25,6 +25,7 @@ namespace VirtualPet.Tests
         public void Pet_Should_Have_Name()
        
         {
+            testPet.Name = "Fluffy";
             Assert.NotNull(testPet.Name);
         }
 
@@ -49,6 +50,7 @@ namespace VirtualPet.Tests
         [Fact]
         public void Pet_Should_Have_Species()
         {
+            testPet.Species = "Cat";
             Assert.NotNull(testPet.Species);
         }
 

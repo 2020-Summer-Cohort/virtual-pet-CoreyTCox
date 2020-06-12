@@ -328,10 +328,13 @@ namespace VirtualPet.Tests
         }
 
         [Fact]
-        public void Remove_Pet_To_Shelter_Should_Remove_Pet_To_List()
+        public void Delete_Pet_Should_Remove_Pet_From_List()
         {
             testShelter.AddPetToShelter(testOrganicPet1);
-            Assert.NotNull(testShelter.listOfPets[0]);
+            testShelter.AddPetToShelter(testOrganicPet2);
+            testShelter.DeletePet(2);
+
+            Assert.Single(testShelter.listOfPets);
         }
     }
 }

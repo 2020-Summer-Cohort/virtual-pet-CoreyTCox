@@ -64,6 +64,12 @@ namespace VirtualPet
             int petIndex = petSelection - 1;
             return listOfPets[petIndex];
         }
+
+        public void DeletePet(int petSelection)
+        {
+            int petIndex = petSelection - 1;
+            listOfPets.RemoveAt(petIndex);
+        }
     }
 }
 
